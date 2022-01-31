@@ -54,7 +54,7 @@ const Orders = () => {
             backgroundActive={'green'}
             backgroundInactive={'gray'}
             circleActiveColor={'#30a566'}
-            circleInActiveColor={'#fff'}
+            circleInActiveColor={Colors.brown}
             changeValueImmediately={true}
             //renderInsideCircle={() => <CustomComponent />} // custom component to render inside the Switch circle (Text, Image, etc.)
             changeValueImmediately={true} // if rendering inside circle, change state immediately or wait for animation to complete
@@ -71,27 +71,29 @@ const Orders = () => {
         </View>
       </View>
       <View style={{ flex: 5, justifyContent: 'center', alignItems: 'center' }}>
-        <View>
+        <View style={{justifyContent:'flex-start'}}>
           <Text
             style={{
               fontWeight: 'bold',
               color: Colors.text,
               textAlign: 'center',
+              fontSize:30,
+              marginVertical:'2%'
             }}
           >
             CLOSED !
           </Text>
-          <Text style={{ color: Colors.grey }}>
+          <Text style={{ color: Colors.grey , marginVertical:'2%'}}>
             Scheduled to open at 10:30 AM
           </Text>
           <TouchableOpacity
             style={{
-              backgroundColor: Colors.grey,
-              color: Colors.text,
-              padding: 8,
+              backgroundColor:  '#fafafa',
+                padding: 12,
 
               // borderWidth: 1,
               borderRadius: 18,
+              marginVertical:'2%'
             }}
           >
             <Text style={{ color: Colors.text, textAlign: 'center' }}>
