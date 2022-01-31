@@ -125,7 +125,7 @@ const Login = () => {
               marginHorizontal: 18,
               borderRadius: 12,
             }}
-            onPress={() => navigate('Business Insights')}
+            onPress={() => navigate('VerifyCode')}
           >
             <Text style={{ color: Colors.white, fontSize: 20 }}>Continue</Text>
           </TouchableOpacity>

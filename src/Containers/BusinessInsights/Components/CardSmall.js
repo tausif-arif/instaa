@@ -14,7 +14,7 @@ const CardSmall = props => {
     >
       <View style={{ justifyContent: 'space-around', marginVertical: '12%' }}>
         <Text style={{ color: props.color }}>{props.text}</Text>
-        <Text style={{ color: props.color, fontSize: 28 }}>{props.value}</Text>
+        <Text style={{ color: props.color, fontSize: 28,fontWeight:'bold' }}>{props.value}</Text>
         <Text style={{ color: props.color }}>{props.orders}</Text>
       </View>
     </View>

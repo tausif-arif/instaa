@@ -103,7 +103,9 @@ const Register = () => {
               marginVertcial: 20,
               marginHorizontal: 18,
               borderRadius: 12,
+              
             }}
+            onPress={() => navigate('VerifyCode')}
           >
             <Text style={{ color: Colors.white, fontSize: 20 }}>Continue</Text>
           </TouchableOpacity>

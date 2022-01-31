@@ -33,7 +33,7 @@ const CardLarge = props => {
   return (
     <View
       style={{
-        flex: 3,
+        flex: 2,
         borderRadius: 15,
         marginVertical: '5%',
         backgroundColor: props.bg,
@@ -45,12 +45,12 @@ const CardLarge = props => {
       <View
         style={{
           justifyContent: 'space-around',
-          marginVertical: '5%',
+          marginVertical: '8%',
           marginLeft: '6%',
                   }}
       >
         <Text style={{ color: props.color }}>Today</Text>
-        <Text style={{ color: props.color, fontSize: 50 }}>{props.value}</Text>
+        <Text style={{ color: props.color, fontSize: 40 ,fontWeight:'bold'}}>{props.value}</Text>
         <Text style={{ color: props.color }}>{props.orders}</Text>
       </View>
       <View

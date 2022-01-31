@@ -17,6 +17,8 @@ import CardLarge from './Components/CardLarge'
 
 const BusinessInsights = () => {
   const [modal, setModal] = useState(false)
+  const [hover, setHover] = useState(false)
+
   // const [screenHeight, setScreenHeight] = useState(0)
 
   // const onContentSizeChange = (width, height) => {
@@ -58,7 +60,7 @@ const BusinessInsights = () => {
       </View>
       <View
         style={{
-          flex: 0.4,
+          flex: 0.3,
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -184,89 +186,168 @@ const BusinessInsights = () => {
           <Modal transparent={true} visible={modal} animationType="slide">
             <View
               style={{
-                flex:.5,
-                height: '50%',
-                marginTop: 'auto',
-                backgroundColor: Colors.white,
-                borderTopLeftRadius: 35,
-                borderTopRightRadius: 35,
-                alignItems: 'center',
-                justifyContent: 'space-evenly',
+                flex: 1,
+                backgroundColor: '#000000aa',
               }}
             >
-            <ScrollView  contentContainerStyle={{}}>
-              <View style={{ flexDirection: 'row',marginTop:'6%' }}>
-                <Text>Locations</Text>
-                <View style={{ alignSelf: 'flex-end',position:'relative',right:0}}>
+              <ScrollView
+                contentContainerStyle={{
+                  height: '50%',
+                  marginTop: 'auto',
+                  backgroundColor: Colors.white,
+                  borderTopLeftRadius: 35,
+                  borderTopRightRadius: 35,
+                  alignItems: 'center',
+                  justifyContent: 'space-evenly',
+                }}
+              >
+                <View style={{ flexDirection: 'row', marginTop: '8%' }}>
+                  <Text style={{ textAlign: 'center' }}>Locations</Text>
+                  <View
+                    style={{
+                      alignSelf: 'flex-end',
+                      position: 'relative',
+                      right: -120,
+                    }}
+                  >
+                    <TouchableOpacity>
+                      <MaterialCommunityIcons
+                        onPress={() => setModal(false)}
+                        name="close"
+                        size={18}
+                        color="grey"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <Text
+                  style={{
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                    color: Colors.text,
+                  }}
+                >
+                  Choose from your saved
+                </Text>
+                <Text
+                  style={{
+                    fontSize: 25,
+                    fontWeight: 'bold',
+                    color: Colors.text,
+                  }}
+                >
+                  locations
+                </Text>
+                <Text>Note:This may also include the hubs under which</Text>
+                <Text>you have been added.</Text>
+
+                <TouchableOpacity
+                  style={{
+                    flexDirection: 'row',
+                    //  borderWidth: 0.5,
+                    // borderColor: Colors.success,
+                    width: '90%',
+                    padding: 8,
+                    borderRadius: 7,
+                  }}
+                >
+                  <MaterialCommunityIcons name="home" size={24} color="grey" />
+                  <View style={{ marginLeft: '2%' }}>
+                    <Text
+                      style={{
+                        fontWeight: '600',
+                        color: Colors.text,
+                        fontSize: 16,
+                      }}
+                    >
+                      Pho House Hub
+                    </Text>
+                    <Text>2972 Westheimer Rd,Santa Ana</Text>
+                  </View>
                   <MaterialCommunityIcons
-                    onPress={() => setModal(false)}
-                    name="plus"
-                    size={24}
-                    color="grey"
+                    name="check-circle"
+                    size={18}
+                    color={Colors.success}
+                    style={{
+                      position: 'relative',
+                      right: -70,
+                      alignSelf: 'center',
+                    }}
                   />
-                </View>
-              </View>
-              <Text
-                style={{ fontSize: 25, fontWeight: 'bold', color: Colors.text }}
-              >
-                Choose from your saved
-              </Text>
-              <Text
-                style={{ fontSize:25, fontWeight:'bold', color: Colors.text }}
-              >
-                locations
-              </Text>
-              <Text>Note:This may also include the hubs under which</Text>
-              <Text>you have been added.</Text>
-              <TouchableOpacity
-                style={{
-                  flexDirection: 'row',
-                  borderWidth: 0.4,
-                  borderColor: Colors.success,
-                  width: '90%',
-                  padding: 8,
-                  borderRadius: 7,
-                }}
-              >
-                <MaterialCommunityIcons name="home" size={24} color="grey" />
-                <View>
-                  <Text>Pho House Hub</Text>
-                  <Text>2972 Westheimer Rd,Santa Ana</Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
-                  flexDirection: 'row',
-                  borderWidth: 0.5,
-                  borderColor: Colors.success,
-                  width: '90%',
-                  padding: 8,
-                  borderRadius: 7,
-                }}
-              >
-                <MaterialCommunityIcons name="home" size={24} color="grey" />
-                <View>
-                  <Text>Pho House Hub</Text>
-                  <Text>2972 Ash Dr San Jose,Silicon Valley</Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={{
+                    flexDirection: 'row',
+                    //  borderWidth: 0.5,
+                    //  borderColor: Colors.success,
+                    width: '90%',
+                    padding: 8,
+                    borderRadius: 7,
+                  }}
+                >
+                  <MaterialCommunityIcons name="home" size={24} color="grey" />
+                  <View style={{ marginLeft: '2%' }}>
+                    <Text
+                      style={{
+                        fontWeight: '600',
+                        color: Colors.text,
+                        fontSize: 16,
+                      }}
+                    >
+                      Pho House Hub
+                    </Text>
+                    <Text>2972 Ash Dr San Jose,Silicon Valley</Text>
+                  </View>
+                 
+                    <MaterialCommunityIcons
+                      name="check-circle"
+                      size={18}
+                      color={Colors.success}
+                      style={{
+                        position: 'relative',
+                        right: -70,
+                        alignSelf: 'center',
+                      }}
+                    />
                   
-                  flexDirection: 'row',
-                  borderWidth: 0.5,
-                  borderColor: Colors.success,
-                  width: '90%',
-                  padding: 8,
-                  borderRadius: 7,
-                }}
-              >
-                <MaterialCommunityIcons name="home" size={24} color="grey" />
-                <View>
-                  <Text>Pho House Hub</Text>
-                  <Text>2972 Westheimer Rd,Santa Ana</Text>
-                </View>
-              </TouchableOpacity>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={{
+                    flexDirection: 'row',
+                    //  borderWidth: 0.5,
+                    // borderColor: Colors.success,
+                    width: '90%',
+                    padding: 8,
+                    borderRadius: 7,
+                  }}
+                  onPress={() => setHover(true)}
+                >
+                  <MaterialCommunityIcons name="home" size={24} color="grey" />
+                  <View style={{ marginLeft: '2%' }}>
+                    <Text
+                      style={{
+                        fontWeight: '600',
+                        color: Colors.text,
+                        fontSize: 16,
+                      }}
+                    >
+                      Pho House Hub
+                    </Text>
+                    <Text>2972 Westheimer Rd,Santa Ana</Text>
+                  </View>
+                  {hover &&
+                  <MaterialCommunityIcons
+                    name="check-circle"
+                    size={18}
+                    color={Colors.success}
+                    style={{
+                      position: 'relative',
+                      right: -70,
+                      alignSelf: 'center',
+                    }}
+                  />}
+                </TouchableOpacity>
               </ScrollView>
             </View>
           </Modal>
